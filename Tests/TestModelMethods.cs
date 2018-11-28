@@ -76,5 +76,15 @@ namespace Tests
             Assert.Equal(10, actual);
         }
 
+        [Theory]
+        [InlineData(4)]
+        [InlineData(34)]
+        [InlineData(-4)]
+        public void ShouldReturnActual_GetActual(int m)
+        {
+            var sut = new GuessModel(m);
+            var actual = sut.GetActual();
+            Assert.Equal(m, actual);
+        }
 	}
 }

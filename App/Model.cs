@@ -30,7 +30,12 @@ namespace App
 
 		public int GetRemainingGuesses()
 		{
-			return remainingGuesses;
+			return remainingGuesses -1;
 		}
+
+		public virtual int GetActual()
+        {
+            return 0;
+        }
 	}
 }
