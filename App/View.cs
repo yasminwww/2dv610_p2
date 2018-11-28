@@ -45,7 +45,7 @@ namespace App
             }
 			 else if (model.IsTooHigh(guess))
             {
-                console.WriteLine("0");
+                console.WriteLine("Something to test.");
             }
 		}
  
