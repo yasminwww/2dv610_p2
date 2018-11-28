@@ -16,6 +16,12 @@ namespace Tests
             Assert.Equal(View.StartMenuAction.StartNew, sut.AskForAction());
         }
 
-
+        [Fact]
+        public void ShouldReturnEnumExit_AskForAction()
+        {
+            var testConsole = new TestConsole("e", new [] { "" });
+            View sut = new View(testConsole, null);
+            Assert.Equal(View.StartMenuAction.Exit, sut.AskForAction());
+        }
     }
 }
