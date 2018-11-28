@@ -39,7 +39,33 @@ namespace Tests
             var sut = new GuessModel(y);
             sut.GuessNumber(x);
             Assert.Equal(true, sut.HasWon());
-        }
-	}
+		}
 
+		
+        [Theory]
+        [InlineData(25, 23)]
+        [InlineData(-25, 2)]
+        [InlineData(1, 55)]
+        public void ShouldReturnFalse_HasWon(int x, int y)
+        {
+            var sut = new GuessModel(y);
+            sut.GuessNumber(x);
+            Assert.Equal(false, sut.HasWon());
+        }
+
+
+		[Theory]
+        [InlineData(25, 76, 4, 23)]
+        [InlineData(-2, 09, 45, 23)]
+
+        public void ShouldReturnFalseOnMismatch_HasWon(int x, int y, int z, int m)
+        {
+            var sut = new GuessModel(m);
+            sut.GuessNumber(x);
+            sut.GuessNumber(y);
+            sut.GuessNumber(z);
+            Assert.Equal(false, sut.HasWon());
+        }
+
+	}
 }
