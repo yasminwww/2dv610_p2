@@ -37,7 +37,10 @@ namespace App
             }
 			return (input == 'p') ? StartMenuAction.StartNew : StartMenuAction.Exit;
 		}
-
+        public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
+        {
+			throw new Exception("not implemented.");
+		}
  
     }
 }

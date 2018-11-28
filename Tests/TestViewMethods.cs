@@ -37,5 +37,23 @@ namespace Tests
             Assert.EndsWith(expected + "\n", testConsole.GetOutput());
         }
 
+
+		
+        [Theory]
+        [InlineData(3, 3, 10)]
+        [InlineData(-27, -27, 10)]
+        public void ShouldPrintWinnerMessage_ShowGameOutcome(int x, int y, int z)
+        {
+            var mockModel = new Mock<GuessModel>(x);
+            mockModel.Setup(m => m.HasWon()).Returns(true);
+
+            var testConsole = new TestConsole("test", new [] { "test" });
+            var expected = $"Congrats!! You guessed it!! The right answer is {x}.";
+
+            View sut = new View(testConsole, mockModel.Object);
+            sut.ShowGameOutcome(x, y, z);
+            Assert.EndsWith(expected + "\n", testConsole.GetOutput());
+        }
+
     }
 }
