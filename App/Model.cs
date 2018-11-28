@@ -18,7 +18,7 @@ namespace App
 
 		public virtual bool IsTooHigh(int guess) 
         {
-            return true;
+            return guess > actual;
         }
 	}
 }
