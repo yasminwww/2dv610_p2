@@ -46,8 +46,11 @@ namespace App
 			 else if (model.IsTooHigh(guess))
             {
                 console.WriteLine($"Sorry, your guess is Too High. Guesses left: ({guessesLeft})");
-
-            }
+            } 
+			else
+			{
+				console.WriteLine("0");
+			}
 		}
  
     }
