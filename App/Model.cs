@@ -15,11 +15,17 @@ namespace App
             this.actual = actual;
             this.guesses = new List<int>();
         }
-
+        public void GuessNumber(int guess)
+        {
+            this.guesses.Add(guess);
+        }
+		public virtual bool HasWon()
+        {
+            return false;
+        }
 		public virtual bool IsTooHigh(int guess) 
         {
             return guess > actual;
         }
-		// hej
 	}
 }
