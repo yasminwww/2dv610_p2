@@ -32,12 +32,10 @@ namespace App
 			while (input != 'p' && input != 'e' && count < 3)
             {
                 this.console.WriteLine("Invalid choice, try again.");
-
                 input = this.console.ReadKey();
                 count++;
             }
 			return (input == 'p') ? StartMenuAction.StartNew : StartMenuAction.Exit;
-
 		}
 
  
