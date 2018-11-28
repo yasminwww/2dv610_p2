@@ -49,7 +49,7 @@ namespace App
             } 
 			else
 			{
-				console.WriteLine("0");
+				console.WriteLine($"Sorry, your guess is Too Low. Guesses left: ({guessesLeft})");
 			}
 		}
  
