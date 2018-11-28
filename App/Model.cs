@@ -27,5 +27,10 @@ namespace App
         {
             return guess > actual;
         }
+
+		public int GetRemainingGuesses()
+		{
+			return 0;
+		}
 	}
 }
