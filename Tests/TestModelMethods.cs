@@ -13,6 +13,5 @@ namespace Tests
             var sut = new GuessModel(x);
             Assert.Equal(true, sut.IsTooHigh(200));
         }
-
   	}
 }
