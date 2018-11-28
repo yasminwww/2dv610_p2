@@ -78,6 +78,8 @@ namespace Tests
 
         [Theory]
         [InlineData(4)]
+        [InlineData(-67)]
+        [InlineData(100)]
         public void ShouldReturnActual_GetActual(int m)
         {
             var sut = new GuessModel(m);
