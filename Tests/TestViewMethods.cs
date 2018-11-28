@@ -55,5 +55,23 @@ namespace Tests
             Assert.EndsWith(expected + "\n", testConsole.GetOutput());
         }
 
+
+		[Theory]
+        [InlineData(46, 66, 10)]
+        [InlineData(-27, 7, 10)]
+        [InlineData(-1, 100, 10)]
+        public void ShouldPrintGuessTooHighMessage_ShowGameOutcome(int x, int y, int z)
+        {
+            var mockModel = new Mock<GuessModel>(x);
+            mockModel.Setup(m => m.IsTooHigh(y)).Returns(true);
+            var testConsole = new TestConsole("test", new [] { "test" });
+            var expected = $"Sorry, your guess is Too High. Guesses left: ({z})";
+
+            View sut = new View(testConsole, mockModel.Object);
+            sut.ShowGameOutcome(x, y, z);
+            Assert.EndsWith(expected + "\n", testConsole.GetOutput());
+        }
+
+
     }
 }

@@ -43,6 +43,10 @@ namespace App
             {
                 console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
             }
+			 else if (model.IsTooHigh(guess))
+            {
+                console.WriteLine("0");
+            }
 		}
  
     }
