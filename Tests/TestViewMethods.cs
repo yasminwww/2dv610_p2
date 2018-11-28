@@ -16,6 +16,7 @@ namespace Tests
             Assert.Equal(View.StartMenuAction.StartNew, sut.AskForAction());
         }
 
+
         [Fact]
         public void ShouldReturnEnumExit_AskForAction()
         {
@@ -23,5 +24,18 @@ namespace Tests
             View sut = new View(testConsole, null);
             Assert.Equal(View.StartMenuAction.Exit, sut.AskForAction());
         }
+
+
+		[Fact]
+        public void ShouldPrintErrorMessage_AskForAction()
+        {
+            var testConsole = new TestConsole("jhkjh", new [] { "" });
+            var expected = "Invalid choice, try again.";
+
+            View sut = new View(testConsole, null);
+            sut.AskForAction();
+            Assert.EndsWith(expected + "\n", testConsole.GetOutput());
+        }
+
     }
 }
