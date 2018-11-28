@@ -21,7 +21,7 @@ namespace App
         }
 		public virtual bool HasWon()
         {
-            return false;
+            return true;
         }
 		public virtual bool IsTooHigh(int guess) 
         {
