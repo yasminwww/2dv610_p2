@@ -27,7 +27,7 @@ namespace App
 
 		public virtual StartMenuAction AskForAction()
         {
-			throw new Exception("Not implemented.");
+			return StartMenuAction.StartNew;
 		}
 
  
