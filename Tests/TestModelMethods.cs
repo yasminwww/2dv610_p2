@@ -56,8 +56,7 @@ namespace Tests
 
 		[Theory]
         [InlineData(25, 76, 4, 23)]
-        [InlineData(-2, 09, 45, 23)]
-
+        [InlineData(-2, 09, 45, 7)]
         public void ShouldReturnFalseOnMismatch_HasWon(int x, int y, int z, int m)
         {
             var sut = new GuessModel(m);
