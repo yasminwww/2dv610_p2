@@ -7,7 +7,7 @@ namespace App
     {
         private readonly int actual;
         private List<int> guesses;
-        public int possibleGuesses = 11;
+        public int remainingGuesses = 11;
     
 
         public GuessModel(int actual)
@@ -30,7 +30,7 @@ namespace App
 
 		public int GetRemainingGuesses()
 		{
-			return 0;
+			return remainingGuesses;
 		}
 	}
 }
