@@ -21,7 +21,7 @@ namespace App
         }
 		public virtual bool HasWon()
         {
-            return true;
+            return guesses.Contains(actual);
         }
 		public virtual bool IsTooHigh(int guess) 
         {
