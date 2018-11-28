@@ -39,7 +39,10 @@ namespace App
 		}
         public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
         {
-			throw new Exception("not implemented.");
+			if (model.HasWon())
+            {
+                console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
+            }
 		}
  
     }
