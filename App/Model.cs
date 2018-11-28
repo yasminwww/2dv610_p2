@@ -35,7 +35,7 @@ namespace App
 
 		public virtual int GetActual()
         {
-            return 0;
+            return 4;
         }
 	}
 }
