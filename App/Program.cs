@@ -6,7 +6,8 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var random = new Random();
+            GuessModel m = new GuessModel(random.Next(1,101));
         }
     }
 }
