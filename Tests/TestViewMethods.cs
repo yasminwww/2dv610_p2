@@ -80,6 +80,7 @@ namespace Tests
         public void ShouldPrintGuessTooLowMessage_ShowGameOutcome(int x, int y, int z)
         {
             var mockModel = new Mock<GuessModel>(x);
+			            mockModel.Setup(m => m.IsTooLow(y)).Returns(true);
             var testConsole = new TestConsole("test", new [] { "test" });
             var expected = $"Sorry, your guess is Too Low. Guesses left: ({z})";
 

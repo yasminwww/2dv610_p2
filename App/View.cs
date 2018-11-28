@@ -39,10 +39,15 @@ namespace App
 		}
         public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
         {
-			if (model.HasWon())
+			if (model.GetRemainingGuesses() == 0)
             {
-                console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
+				console.WriteLine("0");
             }
+			else if(model.HasWon())
+			{
+                console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
+
+			}
 			 else if (model.IsTooHigh(guess))
             {
                 console.WriteLine($"Sorry, your guess is Too High. Guesses left: ({guessesLeft})");
@@ -52,6 +57,5 @@ namespace App
 				console.WriteLine($"Sorry, your guess is Too Low. Guesses left: ({guessesLeft})");
 			}
 		}
- 
     }
 }
