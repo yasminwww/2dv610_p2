@@ -11,6 +11,11 @@ namespace App
         {
            this.view = v;
            this.model = m;
+        } 
+
+        public virtual bool ActionController()
+        {
+            return false;
         }
     }
 }

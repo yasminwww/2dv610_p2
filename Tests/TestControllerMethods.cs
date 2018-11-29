@@ -20,6 +20,15 @@ namespace Tests
 			mockController = new Mock<Controller>(mockView.Object, mockModel.Object);
 		}
 
-  	}
+
+		[Fact]
+		public void ShouldPrintMenuMessage_ActionController()
+		{
+			SetUpMockObjects();
+			var sut = new Controller(mockView.Object, mockModel.Object);
+			sut.ActionController();
+			mockView.Verify(v => v.ShowMenu(), Times.Once());
+		}
+  }
 
 }
