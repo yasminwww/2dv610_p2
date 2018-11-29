@@ -90,15 +90,13 @@ namespace Tests
 
 
 		[Theory]
-        [InlineData(46, 1, 0)]
-        [InlineData(-27, -44, 0)]
         [InlineData(12, -6, 0)]
         public void ShouldPrintOutOfGuessesMessage_ShowGameOutcome(int x, int y, int z)
         {
             var mockModel = new Mock<GuessModel>(x);
-			mockModel.Setup(m => m.GetRemainingGuesses()).Returns(0);
+			mockModel.Setup(m => m.GetRemainingGuesses()).Returns(z);
             var testConsole = new TestConsole("test", new [] { "test" });
-            var expected = $"You Lost!! No more guesses for you.";
+            var expected = $"You Lost, this time!!";
 
             View sut = new View(testConsole, mockModel.Object);
             sut.ShowGameOutcome(x, y, z);

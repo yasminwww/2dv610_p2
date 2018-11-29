@@ -40,12 +40,11 @@ namespace App
 
         public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
         {
-			// if (model.GetRemainingGuesses() == 0)
-            // {
-			// 	console.WriteLine("0");
-            // }
-            
-			 if(model.HasWon())
+			if (guessesLeft == 0)
+            {
+				console.WriteLine($"You Lost, this time!!");
+            }
+			else if (model.HasWon())
 			{
                 console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
 
