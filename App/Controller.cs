@@ -16,25 +16,37 @@ namespace App
         public virtual bool ActionController()
         {
             view.ShowMenu();
-            // TODO: create test on PlayGame(); curently not working.
-            View.StartMenuAction input = view.AskForAction();
 
+            // TODO: create test on PlayGame(); curently not working.
+            
+            View.StartMenuAction input = view.AskForAction();
+            Console.Write(input);
             switch (input)
             {
                 case View.StartMenuAction.StartNew:
-                view.ShowStartGuessingMessage();
-                // return true;
-
-                PlayGame();
-                return true;
-                
-                default: return false;
+                    view.ShowStartGuessingMessage();
+                    return PlayGame();
+                default:
+                    return false;
             }
         }
 
         public virtual bool PlayGame()
         {
             return true;
+            //  bool hasWon = model.HasWon();
+
+            // do {
+            //     int guess = view.GetGuessedNumber();
+            //     model.GuessNumber(guess);
+                
+            //     if(model.IsTooHigh(guess) || model.IsTooLow(guess) || model.HasWon()) 
+            //     {
+            //          view.ShowGameOutcome(model.GetActual(), guess, model.GetRemainingGuesses());
+
+            //     } 
+            // }
+            // while(!hasWon || model.GetRemainingGuesses() != 0);
         }
     }
 }

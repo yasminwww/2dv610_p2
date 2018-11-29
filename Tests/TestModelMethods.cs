@@ -15,7 +15,7 @@ namespace Tests
         public void ShouldReturnTrue_isTooHigh(int x)
         {
             var sut = new GuessModel(x);
-            Assert.Equal(true, sut.IsTooHigh(200));
+            Assert.True(sut.IsTooHigh(200));
         }
 
 
@@ -27,7 +27,7 @@ namespace Tests
 		public void ShouldReturnFalse_isTooHigh(int x, int y)
 		{
 			var sut = new GuessModel(x);
-			Assert.Equal(false, sut.IsTooHigh(y));
+			Assert.False(sut.IsTooHigh(y));
 		}
 
 		
@@ -38,7 +38,7 @@ namespace Tests
         {
             var sut = new GuessModel(y);
             sut.GuessNumber(x);
-            Assert.Equal(true, sut.HasWon());
+            Assert.True(sut.HasWon());
 		}
 
 		
@@ -50,7 +50,7 @@ namespace Tests
         {
             var sut = new GuessModel(y);
             sut.GuessNumber(x);
-            Assert.Equal(false, sut.HasWon());
+            Assert.False(sut.HasWon());
         }
 
 
@@ -63,7 +63,7 @@ namespace Tests
             sut.GuessNumber(x);
             sut.GuessNumber(y);
             sut.GuessNumber(z);
-            Assert.Equal(false, sut.HasWon());
+            Assert.False(sut.HasWon());
         }
 
 		[Theory]

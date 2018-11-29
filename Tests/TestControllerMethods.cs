@@ -39,14 +39,30 @@ namespace Tests
 			sut.ActionController();
 			mockView.Verify(v => v.ShowStartGuessingMessage(), Times.Once());			
 		}
-		
+
+		// TODO: FIX THE PROBLEM.
 		[Fact]
 		public void ShouldRunPlayGame_ActionController()
 		{
 			SetUpMockObjects();
+			mockView.Setup(m => m.AskForAction()).Returns(View.StartMenuAction.StartNew);
+
 			var sut = new Controller(mockView.Object, mockModel.Object);
-			sut.ActionController();
-			mockController.Verify(c => c.PlayGame(), Times.Once());
+			Assert.True(sut.ActionController());
+			// sut.ActionController();
+			// mockController.Verify(c => c.ActionController(), Times.Once());
+			
+			//mockView.VerifyAll();
+		}
+
+		[Fact]
+		public void ShouldReturnFalseWhenExitIsChosen_ActionController()
+		{
+			SetUpMockObjects();
+			mockView.Setup(m => m.AskForAction()).Returns(View.StartMenuAction.Exit);
+			var sut = new Controller(mockView.Object, mockModel.Object);
+			
+			Assert.False(sut.ActionController());			
 		}
   	}
 }
