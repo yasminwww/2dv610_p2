@@ -15,6 +15,7 @@ namespace App
 
         public virtual bool ActionController()
         {
+            view.ShowMenu();
             return false;
         }
     }
