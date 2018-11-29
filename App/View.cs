@@ -43,6 +43,12 @@ namespace App
 			return (input == 'p') ? StartMenuAction.StartNew : StartMenuAction.Exit;
 		}
 
+        public virtual void ShowStartGuessingMessage()
+        {
+            this.console.WriteLine("Enter a number between 1 & 100..\n");
+        }
+
+        
         public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
         {
 			if (guessesLeft == 0)

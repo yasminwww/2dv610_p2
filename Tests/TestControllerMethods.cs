@@ -30,6 +30,15 @@ namespace Tests
 			mockView.Verify(v => v.ShowMenu(), Times.Once());
 		}
 
+		[Fact]
+		public void ShouldPrintStartGameMessage_ActionController()
+		{
+			SetUpMockObjects();
+			mockView.Setup(m => m.AskForAction()).Returns(View.StartMenuAction.StartNew);
+			var sut = new Controller(mockView.Object, mockModel.Object);
+			sut.ActionController();
+			mockView.Verify(v => v.ShowStartGuessingMessage(), Times.Once());			
+		}
 		
 		[Fact]
 		public void ShouldRunPlayGame_ActionController()
