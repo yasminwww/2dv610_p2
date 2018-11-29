@@ -25,6 +25,11 @@ namespace App
             this.model = gm;
         }
 
+        public virtual void ShowMenu()
+        {
+            this.console.WriteLine("Hello, Would you like to start a New Game?\n 'p' = Play\n 'e' = Exit");
+        }
+
 		public virtual StartMenuAction AskForAction()
         {
 			int count = 0;

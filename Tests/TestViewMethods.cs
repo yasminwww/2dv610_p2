@@ -46,7 +46,6 @@ namespace Tests
         {
             var mockModel = new Mock<GuessModel>(x);
             mockModel.Setup(m => m.HasWon()).Returns(true);
-
             var testConsole = new TestConsole("test", new [] { "test" });
             var expected = $"Congrats!! You guessed it!! The right answer is {x}.";
 
