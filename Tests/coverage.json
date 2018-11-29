@@ -1,0 +1,242 @@
+{
+  "App.dll": {
+    "C:\\Users\\yasmi\\TDD\\2dv610_p2\\App\\IConsole.cs": {
+      "RealConsole": {
+        "System.Char RealConsole::ReadKey()": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.String RealConsole::ReadLine()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void RealConsole::WriteLine(System.String)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yasmi\\TDD\\2dv610_p2\\App\\Model.cs": {
+      "App.GuessModel": {
+        "System.Void App.GuessModel::GuessNumber(System.Int32)": {
+          "Lines": {
+            "19": 12,
+            "20": 12,
+            "21": 12
+          },
+          "Branches": []
+        },
+        "System.Boolean App.GuessModel::HasWon()": {
+          "Lines": {
+            "23": 7,
+            "24": 7,
+            "25": 7
+          },
+          "Branches": []
+        },
+        "System.Boolean App.GuessModel::IsTooHigh(System.Int32)": {
+          "Lines": {
+            "27": 8,
+            "28": 8,
+            "29": 8
+          },
+          "Branches": []
+        },
+        "System.Boolean App.GuessModel::IsTooLow(System.Int32)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 App.GuessModel::GetRemainingGuesses()": {
+          "Lines": {
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 App.GuessModel::GetActual()": {
+          "Lines": {
+            "41": 3,
+            "42": 3,
+            "43": 3
+          },
+          "Branches": []
+        },
+        "System.Void App.GuessModel::.ctor(System.Int32)": {
+          "Lines": {
+            "10": 27,
+            "13": 27,
+            "14": 27,
+            "15": 27,
+            "16": 27,
+            "17": 27
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\yasmi\\TDD\\2dv610_p2\\App\\View.cs": {
+      "App.View": {
+        "App.View/StartMenuAction App.View::AskForAction()": {
+          "Lines": {
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "32": 6,
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 3,
+            "39": 3
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 71,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 3
+            },
+            {
+              "Line": 32,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 32,
+              "Offset": 60,
+              "EndOffset": 62,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 4
+            },
+            {
+              "Line": 32,
+              "Offset": 55,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 60,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 71,
+              "EndOffset": 73,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 3
+            },
+            {
+              "Line": 38,
+              "Offset": 76,
+              "EndOffset": 78,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 38,
+              "Offset": 76,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void App.View::ShowGameOutcome(System.Int32,System.Int32,System.Int32)": {
+          "Lines": {
+            "42": 8,
+            "47": 8,
+            "48": 2,
+            "49": 2,
+            "51": 2,
+            "52": 6,
+            "53": 3,
+            "54": 3,
+            "55": 3,
+            "57": 3,
+            "58": 3,
+            "59": 3,
+            "60": 8
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 47,
+              "Offset": 14,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 52,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 52,
+              "Offset": 62,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void App.View::.ctor(IConsole,App.GuessModel)": {
+          "Lines": {
+            "22": 11,
+            "23": 11,
+            "24": 11,
+            "25": 11,
+            "26": 11
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

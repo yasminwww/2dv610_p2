@@ -37,13 +37,14 @@ namespace App
             }
 			return (input == 'p') ? StartMenuAction.StartNew : StartMenuAction.Exit;
 		}
+
         public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
         {
-			if (model.GetRemainingGuesses() == 0)
-            {
-				console.WriteLine("0");
-            }
-			else if(model.HasWon())
+			// if (model.GetRemainingGuesses() == 0)
+            // {
+			// 	console.WriteLine("0");
+            // }
+			 if(model.HasWon())
 			{
                 console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
 

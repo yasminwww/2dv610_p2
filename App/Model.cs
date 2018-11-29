@@ -31,7 +31,7 @@ namespace App
         {
             return guess < actual;
         }
-		public int GetRemainingGuesses()
+		public virtual int GetRemainingGuesses()
 		{
 			remainingGuesses =  remainingGuesses - 1;
             return remainingGuesses;

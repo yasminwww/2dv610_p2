@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start": "dotnet run -p App",
+    "test": "cd Tests && dotnet test && cd ..",
+    "coverage": "cd Tests && dotnet test /p:CollectCoverage=true /p:ExcludeByFile=\"../App/Program.cs\" && cd .."
+  }
+}

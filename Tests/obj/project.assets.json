@@ -23,7 +23,7 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
-      "coverlet.msbuild/2.3.2": {
+      "coverlet.msbuild/2.4.0": {
         "type": "package",
         "build": {
           "build/netstandard2.0/coverlet.msbuild.props": {},
@@ -1790,10 +1790,10 @@
         "readme.txt"
       ]
     },
-    "coverlet.msbuild/2.3.2": {
-      "sha512": "ZX4f5k4cx1pzwyToYOS1Ny8V1yMq4ZkPhsg2m0QlOcShxnTgU5YaMFGnj6iPpaZwXB6Of9huK3Grh7+ahhqnng==",
+    "coverlet.msbuild/2.4.0": {
+      "sha512": "MzrE+2jFuUqtNcG4lZisVqiDk/Uw8NjPDYKsx4twvbNXio9n3UgDp3+UcOextdX7k9IldrgcpCcRLSwKKyo2eA==",
       "type": "package",
-      "path": "coverlet.msbuild/2.3.2",
+      "path": "coverlet.msbuild/2.4.0",
       "files": [
         ".signature.p7s",
         "build/netstandard2.0/ConsoleTables.dll",
@@ -1858,7 +1858,7 @@
         "build/netstandard2.0/runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "build/netstandard2.0/runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll",
         "build/netstandard2.0/runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll",
-        "coverlet.msbuild.2.3.2.nupkg.sha512",
+        "coverlet.msbuild.2.4.0.nupkg.sha512",
         "coverlet.msbuild.nuspec"
       ]
     },
@@ -6083,7 +6083,7 @@
       "Microsoft.NET.Test.Sdk >= 15.8.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Moq >= 4.10.0",
-      "coverlet.msbuild >= 2.3.2",
+      "coverlet.msbuild >= 2.4.0",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
     ]
@@ -6149,7 +6149,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.3.2, )"
+            "version": "[2.4.0, )"
           },
           "xunit": {
             "target": "Package",

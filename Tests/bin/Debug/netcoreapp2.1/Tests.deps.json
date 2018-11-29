@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "d3e3d0ce90af572094efc1b5b7c8e7b58f4b2efc"
+    "signature": "dab603c5521c681c5b52e5f8a0d6f173503375c7"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,7 +11,7 @@
           "App": "1.0.0",
           "Microsoft.NET.Test.Sdk": "15.8.0",
           "Moq": "4.10.0",
-          "coverlet.msbuild": "2.3.2",
+          "coverlet.msbuild": "2.4.0",
           "xunit": "2.3.1",
           "xunit.runner.visualstudio": "2.3.1"
         },
@@ -38,7 +38,7 @@
           }
         }
       },
-      "coverlet.msbuild/2.3.2": {},
+      "coverlet.msbuild/2.4.0": {},
       "Microsoft.CodeCoverage/15.8.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -1119,12 +1119,12 @@
       "path": "castle.core/4.3.1",
       "hashPath": "castle.core.4.3.1.nupkg.sha512"
     },
-    "coverlet.msbuild/2.3.2": {
+    "coverlet.msbuild/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZX4f5k4cx1pzwyToYOS1Ny8V1yMq4ZkPhsg2m0QlOcShxnTgU5YaMFGnj6iPpaZwXB6Of9huK3Grh7+ahhqnng==",
-      "path": "coverlet.msbuild/2.3.2",
-      "hashPath": "coverlet.msbuild.2.3.2.nupkg.sha512"
+      "sha512": "sha512-MzrE+2jFuUqtNcG4lZisVqiDk/Uw8NjPDYKsx4twvbNXio9n3UgDp3+UcOextdX7k9IldrgcpCcRLSwKKyo2eA==",
+      "path": "coverlet.msbuild/2.4.0",
+      "hashPath": "coverlet.msbuild.2.4.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/15.8.0": {
       "type": "package",
