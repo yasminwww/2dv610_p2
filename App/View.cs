@@ -44,6 +44,7 @@ namespace App
             // {
 			// 	console.WriteLine("0");
             // }
+            
 			 if(model.HasWon())
 			{
                 console.WriteLine($"Congrats!! You guessed it!! The right answer is {actual}.");
