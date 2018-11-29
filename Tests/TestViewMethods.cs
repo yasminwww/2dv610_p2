@@ -104,6 +104,5 @@ namespace Tests
         //     sut.ShowGameOutcome(x, y, z);
         //     Assert.EndsWith(expected + "\n", testConsole.GetOutput());
         // }
-
     }
 }

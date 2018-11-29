@@ -23,7 +23,7 @@ dotnet run -p ./Assignment1Part2.Con/Assignment1Part2.Con.csproj
 ```
 
 
-### To check coverage
+### To check coverage:
 ```sh
 npm run coverage
 ```
