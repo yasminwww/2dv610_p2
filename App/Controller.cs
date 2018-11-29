@@ -16,7 +16,12 @@ namespace App
         public virtual bool ActionController()
         {
             view.ShowMenu();
-            return false;
+            View.StartMenuAction input = view.AskForAction();
+            switch (input)
+            {
+                
+                default: return false;
+            }
         }
     }
 }
