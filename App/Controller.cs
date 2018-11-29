@@ -23,5 +23,8 @@ namespace App
                 default: return false;
             }
         }
+
+                public void PlayGame()
+       {}
     }
 }

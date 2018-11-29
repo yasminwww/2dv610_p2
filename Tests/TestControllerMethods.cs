@@ -12,7 +12,7 @@ namespace Tests
 		private Mock<TestConsole> i_console;
 		private Mock<Controller> mockController;
 
-    		public void SetUpMockObjects()
+    	public void SetUpMockObjects()
 		{
 			i_console = new Mock<TestConsole>("test", new string[] {"test"});
 			mockModel = new Mock<GuessModel>(9);
@@ -29,6 +29,15 @@ namespace Tests
 			sut.ActionController();
 			mockView.Verify(v => v.ShowMenu(), Times.Once());
 		}
-  }
 
+		
+		[Fact]
+		public void ShouldRunPlayGame_ActionController()
+		{
+			SetUpMockObjects();
+			var sut = new Controller(mockView.Object, mockModel.Object);
+			sut.ActionController();
+			mockController.Verify(c => c.PlayGame(), Times.Once());
+		}
+  	}
 }
