@@ -78,6 +78,7 @@ namespace Tests
             Assert.Equal(10, actual);
         }
 
+
 		[Theory]
         [InlineData(25, 23)]
         public void ShouldReturnRemaining_GetRemainingGuesses(int x, int m)
@@ -87,6 +88,7 @@ namespace Tests
             var actual = sut.SetRemainingGuesses();
             Assert.Equal(10, actual);
         }
+
 
         [Theory]
         [InlineData(4)]

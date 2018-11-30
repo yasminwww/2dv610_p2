@@ -37,6 +37,28 @@ namespace Tests
             Assert.EndsWith(expected + "\n", testConsole.GetOutput());
         }
 
+        [Fact]
+        public void ShouldPrintMenuMessage_AskForAction()
+        {
+            var testConsole = new TestConsole("t", new [] { "t" });
+            var expected = "Hello, Would you like to start a New Game?\n 'p' = Play\n 'e' = Exit";
+
+            View sut = new View(testConsole, null);
+            sut.ShowMenu();
+            Assert.EndsWith(expected + "\n", testConsole.GetOutput());
+        }
+
+        [Fact]
+        public void ShouldPrintStartGuessingMessage_AskForAction()
+        {
+            var testConsole = new TestConsole("t", new [] { "t" });
+            var expected = "Enter a number between 1 & 100..\n";
+
+            View sut = new View(testConsole, null);
+            sut.ShowStartGuessingMessage();
+            Assert.EndsWith(expected + "\n", testConsole.GetOutput());
+        }
+
 
 		
         [Theory]
