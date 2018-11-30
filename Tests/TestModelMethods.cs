@@ -72,7 +72,7 @@ namespace Tests
         {
             var sut = new GuessModel(m);
             sut.GuessNumber(x);
-            var actual = sut.GetRemainingGuesses();
+            var actual = sut.SetRemainingGuesses();
             Assert.Equal(10, actual);
         }
 

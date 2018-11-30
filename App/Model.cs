@@ -30,10 +30,18 @@ namespace App
         {
             return guess > actual;
         }
+        public virtual bool IsTooLow(int guess) 
+        {
+            return guess < actual;
+        }
 
-		public virtual int GetRemainingGuesses()
+		public virtual int SetRemainingGuesses()
 		{
 			remainingGuesses =  remainingGuesses - 1;
+            return remainingGuesses;
+		}
+        public virtual int GetRemainingGuesses()
+		{
             return remainingGuesses;
 		}
 

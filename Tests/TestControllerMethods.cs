@@ -49,20 +49,26 @@ namespace Tests
 
 			var sut = new Controller(mockView.Object, mockModel.Object);
 			Assert.True(sut.ActionController());
-			// sut.ActionController();
-			// mockController.Verify(c => c.ActionController(), Times.Once());
-			
-			//mockView.VerifyAll();
 		}
 
 		[Fact]
 		public void ShouldReturnFalseWhenExitIsChosen_ActionController()
 		{
 			SetUpMockObjects();
-			mockView.Setup(m => m.AskForAction()).Returns(View.StartMenuAction.Exit);
+			mockView.Setup(v => v.AskForAction()).Returns(View.StartMenuAction.Exit);
+
 			var sut = new Controller(mockView.Object, mockModel.Object);
-			
-			Assert.False(sut.ActionController());			
+			Assert.False(sut.ActionController());
 		}
+
+		// [Fact]
+		// public void ShouldReturnView_ActionController()
+		// {
+		// 	SetUpMockObjects();
+		// 	mockView.Setup(m => m.GetGuessedNumber()).Returns(8);
+		// 	var sut = new Controller(mockView.Object, mockModel.Object);
+			
+		// 	Assert.False(sut.ActionController());			
+		// }
   	}
 }

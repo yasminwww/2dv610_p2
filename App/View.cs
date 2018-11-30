@@ -48,7 +48,16 @@ namespace App
             this.console.WriteLine("Enter a number between 1 & 100..\n");
         }
 
-        
+        public virtual int GetGuessedNumber()
+        { 
+            int input;
+            string rawStringInput = console.ReadLine();
+            int.TryParse(rawStringInput, out input);
+
+            return input;
+        }
+
+
         public virtual void ShowGameOutcome(int actual, int guess, int guessesLeft)
         {
 			if (guessesLeft == 0)

@@ -25,7 +25,10 @@ namespace App
             {
                 case View.StartMenuAction.StartNew:
                     view.ShowStartGuessingMessage();
-                    return PlayGame();
+                    PlayGame();
+                    return true;
+                case View.StartMenuAction.Exit:
+                    return true;
                 default:
                     return false;
             }
@@ -33,20 +36,13 @@ namespace App
 
         public virtual bool PlayGame()
         {
-            return true;
-            //  bool hasWon = model.HasWon();
-
-            // do {
-            //     int guess = view.GetGuessedNumber();
-            //     model.GuessNumber(guess);
-                
-            //     if(model.IsTooHigh(guess) || model.IsTooLow(guess) || model.HasWon()) 
-            //     {
-            //          view.ShowGameOutcome(model.GetActual(), guess, model.GetRemainingGuesses());
-
-            //     } 
-            // }
-            // while(!hasWon || model.GetRemainingGuesses() != 0);
+            do {
+                int guess = view.GetGuessedNumber();
+                model.GuessNumber(guess);
+                view.ShowGameOutcome(model.GetActual(), guess, model.SetRemainingGuesses());
+            } 
+            while(!model.HasWon() && model.GetRemainingGuesses() != 0);
+            return false;
         }
     }
 }
