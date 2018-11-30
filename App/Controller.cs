@@ -6,7 +6,7 @@ namespace App
     {
         View view;
         GuessModel model;
-         Random random = new Random();
+
         public Controller(View v, GuessModel m)
         {
            this.view = v;
@@ -17,10 +17,8 @@ namespace App
         {
             view.ShowMenu();
 
-            // TODO: create test on PlayGame(); curently not working.
-            
             View.StartMenuAction input = view.AskForAction();
-            Console.Write(input);
+
             switch (input)
             {
                 case View.StartMenuAction.StartNew:

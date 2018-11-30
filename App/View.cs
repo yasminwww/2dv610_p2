@@ -27,7 +27,7 @@ namespace App
 
         public virtual void ShowMenu()
         {
-            this.console.WriteLine("Hello, Would you like to start a New Game?\n 'p' = Play\n 'e' = Exit");
+            console.WriteLine("Hello, Would you like to start a New Game?\n 'p' = Play\n 'e' = Exit");
         }
 
 		public virtual StartMenuAction AskForAction()
@@ -45,7 +45,7 @@ namespace App
 
         public virtual void ShowStartGuessingMessage()
         {
-            this.console.WriteLine("Enter a number between 1 & 100..\n");
+            console.WriteLine("Enter a number between 1 & 100..\n");
         }
 
         public virtual int GetGuessedNumber()
