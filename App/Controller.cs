@@ -28,7 +28,7 @@ namespace App
                     PlayGame();
                     return true;
                 case View.StartMenuAction.Exit:
-                    return true;
+                    return false;
                 default:
                     return false;
             }
