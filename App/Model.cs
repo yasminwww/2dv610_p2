@@ -30,10 +30,6 @@ namespace App
         {
             return guess > actual;
         }
-        public virtual bool IsTooLow(int guess) 
-        {
-            return guess < actual;
-        }
 
 		public virtual int SetRemainingGuesses()
 		{

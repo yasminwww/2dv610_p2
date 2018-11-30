@@ -64,7 +64,7 @@ namespace Tests
             var mockModel = new Mock<GuessModel>(x);
             mockModel.Setup(m => m.IsTooHigh(y)).Returns(true);
             var testConsole = new TestConsole("test", new [] { "test" });
-            var expected = $"Sorry, your guess is Too High. Guesses left: ({z})";
+            var expected = $"Your guess is Too High. Guesses left: ({z})";
 
             View sut = new View(testConsole, mockModel.Object);
             sut.ShowGameOutcome(x, y, z);
@@ -80,7 +80,7 @@ namespace Tests
         {
             var mockModel = new Mock<GuessModel>(x);
             var testConsole = new TestConsole("test", new [] { "test" });
-            var expected = $"Sorry, your guess is Too Low. Guesses left: ({z})";
+            var expected = $"Your guess is Too Low. Guesses left: ({z})";
 
             View sut = new View(testConsole, mockModel.Object);
             sut.ShowGameOutcome(x, y, z);

@@ -40,9 +40,8 @@ namespace Tests
 			mockView.Verify(v => v.ShowStartGuessingMessage(), Times.Once());			
 		}
 
-		// TODO: FIX THE PROBLEM.
 		[Fact]
-		public void ShouldRunPlayGame_ActionController()
+		public void ShouldReturnTrueWhenStartNewIsChosen_ActionController()
 		{
 			SetUpMockObjects();
 			mockView.Setup(m => m.AskForAction()).Returns(View.StartMenuAction.StartNew);
@@ -61,14 +60,14 @@ namespace Tests
 			Assert.False(sut.ActionController());
 		}
 
-		// [Fact]
-		// public void ShouldReturnView_ActionController()
-		// {
-		// 	SetUpMockObjects();
-		// 	mockView.Setup(m => m.GetGuessedNumber()).Returns(8);
-		// 	var sut = new Controller(mockView.Object, mockModel.Object);
+		[Fact]
+		public void ShouldReturn_ActionController()
+		{
+			SetUpMockObjects();
+			mockView.Setup(m => m.GetGuessedNumber()).Returns(8);
+			var sut = new Controller(mockView.Object, mockModel.Object);
 			
-		// 	Assert.False(sut.ActionController());			
-		// }
+			Assert.False(sut.PlayGame());			
+		}
   	}
 }

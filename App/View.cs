@@ -71,11 +71,11 @@ namespace App
 			}
 			 else if (model.IsTooHigh(guess))
             {
-                console.WriteLine($"Sorry, your guess is Too High. Guesses left: ({guessesLeft})");
+                console.WriteLine($"Your guess is Too High. Guesses left: ({guessesLeft})");
             } 
 			else
 			{
-				console.WriteLine($"Sorry, your guess is Too Low. Guesses left: ({guessesLeft})");
+				console.WriteLine($"Your guess is Too Low. Guesses left: ({guessesLeft})");
 			}
 		}
     }

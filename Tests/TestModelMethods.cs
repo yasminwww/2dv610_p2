@@ -66,6 +66,18 @@ namespace Tests
             Assert.False(sut.HasWon());
         }
 
+
+        [Theory]
+        [InlineData(1, 87)]
+        public void ShouldReturnRemaining_SetRemainingGuesses(int x, int y)
+        {
+            var sut = new GuessModel(y);
+            sut.GuessNumber(x);
+            sut.SetRemainingGuesses();
+            var actual = sut.GetRemainingGuesses();
+            Assert.Equal(10, actual);
+        }
+
 		[Theory]
         [InlineData(25, 23)]
         public void ShouldReturnRemaining_GetRemainingGuesses(int x, int m)
