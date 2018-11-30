@@ -49,11 +49,14 @@ namespace App
         }
 
         public virtual int GetGuessedNumber()
-        { 
+        {
             int input;
             string rawStringInput = console.ReadLine();
-            int.TryParse(rawStringInput, out input);
-
+            while(!int.TryParse(rawStringInput, out input))
+            {
+                console.WriteLine("That's not an interger. Try Again.");
+                rawStringInput = Console.ReadLine();
+            }
             return input;
         }
 

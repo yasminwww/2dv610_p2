@@ -38,7 +38,7 @@ namespace Tests
         }
 
         [Fact]
-        public void ShouldPrintMenuMessage_AskForAction()
+        public void ShouldPrintMenuMessage_ShowMenu()
         {
             var testConsole = new TestConsole("t", new [] { "t" });
             var expected = "Hello, Would you like to start a New Game?\n 'p' = Play\n 'e' = Exit";
@@ -49,7 +49,7 @@ namespace Tests
         }
 
         [Fact]
-        public void ShouldPrintStartGuessingMessage_AskForAction()
+        public void ShouldPrintStartGuessingMessage_ShowStartGuessingMessage()
         {
             var testConsole = new TestConsole("t", new [] { "t" });
             var expected = "Enter a number between 1 & 100..\n";
@@ -59,7 +59,15 @@ namespace Tests
             Assert.EndsWith(expected + "\n", testConsole.GetOutput());
         }
 
+        [Fact]
+        public void ShouldReturnInterger_GetGuessedNumber()
+        {
+            var testConsole = new TestConsole("", new [] { "1" });
+            var expected = 1;
 
+            View sut = new View(testConsole, null);
+            Assert.Equal(expected, sut.GetGuessedNumber());
+        }
 		
         [Theory]
         [InlineData(3, 3, 10)]
@@ -68,7 +76,7 @@ namespace Tests
         {
             var mockModel = new Mock<GuessModel>(x);
             mockModel.Setup(m => m.HasWon()).Returns(true);
-            var testConsole = new TestConsole("test", new [] { "test" });
+            var testConsole = new TestConsole("t", new [] { "test" });
             var expected = $"Congrats!! You guessed it!! The right answer is {x}.";
 
             View sut = new View(testConsole, mockModel.Object);
@@ -101,7 +109,7 @@ namespace Tests
         public void ShouldPrintGuessTooLowMessage_ShowGameOutcome(int x, int y, int z)
         {
             var mockModel = new Mock<GuessModel>(x);
-            var testConsole = new TestConsole("test", new [] { "test" });
+            var testConsole = new TestConsole("t", new [] { "test" });
             var expected = $"Your guess is Too Low. Guesses left: ({z})";
 
             View sut = new View(testConsole, mockModel.Object);
@@ -116,7 +124,7 @@ namespace Tests
         {
             var mockModel = new Mock<GuessModel>(x);
 			mockModel.Setup(m => m.GetRemainingGuesses()).Returns(z);
-            var testConsole = new TestConsole("test", new [] { "test" });
+            var testConsole = new TestConsole("t", new [] { "test" });
             var expected = $"You Lost, this time!!";
 
             View sut = new View(testConsole, mockModel.Object);
