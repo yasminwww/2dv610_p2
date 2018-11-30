@@ -45,7 +45,7 @@ namespace App
 
         public virtual void ShowStartGuessingMessage()
         {
-            this.console.WriteLine("0");
+            this.console.WriteLine("Enter a number between 1 & 100..\n");
         }
 
         public virtual int GetGuessedNumber()
