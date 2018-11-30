@@ -29,5 +29,5 @@ dotnet run -p ./App/App.csproj
 npm run coverage
 ```
 
-/ while in root dir of project.
+##### / while in root dir of project.
 
